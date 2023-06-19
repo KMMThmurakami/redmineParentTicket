@@ -2,12 +2,12 @@ javascript: (function () {
   var D = document, // ドキュメントオブジェクトへの参照を取得
     B = D.getElementsByTagName("body")[0]; // ページの<body>要素を取得
 
-  // 既に検索パネルが存在する場合は処理を終了する
+  // 既にパネルが存在する場合は処理を終了する
   if (D.getElementById("sp")) {
     return;
   }
 
-  // 検索パネルを作成する関数
+  // パネルを作成する関数
   function bmlPanel(id, w, h) {
     var P, F, H, X, DP, CL;
     var pos1 = 0,
@@ -198,11 +198,11 @@ javascript: (function () {
 
   var Es = getTrackerItem();
 
-  // 検索パネルを作成（アイテム数だけ高さを確保する）
+  // パネルを作成（アイテム数だけ高さを確保する）
   var SP = bmlPanel("sp", 370, 175 + 23 * Es.length);
 
-  // 検索パネルのヘッダーテキストを設定
-  SP.header.innerHTML = "検索パネル";
+  // パネルのヘッダーテキストを設定
+  SP.header.innerHTML = "親チケットテンプレート";
   SP.content.innerHTML =
     '<div style="padding: 10px;">テキスト入力欄にリリース日を mm/dd の形式で入力してください</div>';
 
@@ -280,7 +280,7 @@ javascript: (function () {
   C.appendChild((sbm = D.createElement("button")));
 
   with (sbm) {
-    (innerHTML = "選択したサービスで検索"),
+    (innerHTML = "チケットに書き込む"),
       (style.cssText =
         "cursor:pointer; margin:6px auto; display:block; clear:both; padding: 6px 12px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 14px;");
 
