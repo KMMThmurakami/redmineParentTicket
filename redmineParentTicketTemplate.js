@@ -211,8 +211,8 @@ javascript: (function () {
 
   var C = SP.content, // パネルのコンテンツ要素
     qt, // テキスト入力欄
-    rb = [], // 検索エンジンのラジオボタン
-    td = [], // 検索エンジンのラベル
+    rb = [], // ラジオボタン
+    td = [], // ラベル
     i,
     sbm,
     tmp;
@@ -246,7 +246,7 @@ javascript: (function () {
         "display:block; width:90%; margin:6px; border:1px solid #666; background:transparent; color:inherit; font-weight:bold; font-size:13px;");
   }
 
-  // 検索エンジンのラジオボタンとラベルを作成し、パネルに追加
+  // ラジオボタンとラベルを作成し、パネルに追加
   for (i = 0; i < Es.length; i++) {
     var container = D.createElement("div");
     container.style.cssText =
@@ -279,7 +279,7 @@ javascript: (function () {
     }
   }
 
-  // 検索ボタンを作成し、パネルに追加
+  // ボタンを作成し、パネルに追加
   C.appendChild((sbm = D.createElement("button")));
 
   with (sbm) {
@@ -287,7 +287,7 @@ javascript: (function () {
       (style.cssText =
         "cursor:pointer; margin:6px auto; display:block; clear:both; padding: 6px 12px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 14px;");
 
-    // 検索ボタンをクリックしたときの処理
+    // ボタンをクリックしたときの処理
     onclick = function () {
       if (!judgeDateText(qt.value)) {
         return;
