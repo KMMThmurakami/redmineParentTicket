@@ -113,12 +113,15 @@ javascript: (function () {
   }
 
   // チケットにテンプレートを流し込む関数
-  function inputTicketData(releaseDay, trackerId) {
+  function inputTicketData(releaseDay, trackerId, trackerTitle) {
     var names;
+
+    // prefixを設定
+    var prefix = "[" + trackerTitle.slice(0,-5) + "]";
 
     // フォームの値を設定
     names = document.getElementsByName("issue[subject]");
-    names[0].value = `${releaseDay}リリースタスク`;
+    names[0].value = `${prefix}${releaseDay}リリースタスク`;
 
     // トラッカーの初期値を設定
     names = document.getElementsByName("issue[tracker_id]");
@@ -292,7 +295,7 @@ javascript: (function () {
       for (i = 0; i < rb.length; i++) {
         if (rb[i].checked) {
           // チケットにテンプレートを流し込む
-          inputTicketData(qt.value, rb[i].value);
+          inputTicketData(qt.value, rb[i].value, Es[i][0]);
         }
       }
       // 全ての処理が終わったらパネルを閉じる
