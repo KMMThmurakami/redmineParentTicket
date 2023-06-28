@@ -175,7 +175,7 @@ javascript: (function () {
 
     // 説明を設定
     names = document.getElementsByName("issue[description]");
-    names[0].value = `${releaseDay}リリースタスクです。\n\n▼マージログ\n\n------ 11:00リリース ------\n\n-------- ↓アプライ予約済み ----------`;
+    names[0].value = `${releaseDay}リリースタスクです。\n\n▼マージログ\n\n------ 11:00リリース ------\n\n-------- ↓アプライ予約済み ----------\n\n--------------------------------------------------------\nposted by redmineParentTicketTemplate.js\n--------------------------------------------------------`;
   }
 
   // トラッカーの値を取得する関数
